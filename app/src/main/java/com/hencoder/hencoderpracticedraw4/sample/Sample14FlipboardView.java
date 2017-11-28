@@ -86,6 +86,7 @@ public class Sample14FlipboardView extends View {
         } else {
             canvas.clipRect(0, 0, getWidth(), centerY);
         }
+
         camera.save();
         camera.rotateX(degree);
         canvas.translate(centerX, centerY);

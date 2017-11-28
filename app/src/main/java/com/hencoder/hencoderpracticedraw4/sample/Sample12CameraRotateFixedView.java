@@ -44,6 +44,7 @@ public class Sample12CameraRotateFixedView extends View {
 
         int bitmapWidth = bitmap.getWidth();
         int bitmapHeight = bitmap.getHeight();
+
         int center1X = point1.x + bitmapWidth / 2;
         int center1Y = point1.y + bitmapHeight / 2;
         int center2X = point2.x + bitmapWidth / 2;
@@ -56,6 +57,7 @@ public class Sample12CameraRotateFixedView extends View {
         camera.restore();
         matrix.preTranslate(-center1X, -center1Y);
         matrix.postTranslate(center1X, center1Y);
+
         canvas.save();
         canvas.concat(matrix);
         canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
